@@ -12,7 +12,9 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.13"
+  },
   "scripts": {
     "build": "gulp",
     "test": "echo \"Error: no test specified\""
