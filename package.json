@@ -1,0 +1,35 @@
+{
+  "name": "jacaran.tech",
+  "version": "1.0.0",
+  "description": "Static site for Jacaran.tech organization.",
+  "main": "gulp",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jacarantech/jacaran.tech.git"
+  },
+  "keywords": [
+    "jacarantech",
+    "tech",
+    "social",
+    "tech"
+  ],
+  "author": "jacaran.tech",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jacarantech/jacaran.tech/issues"
+  },
+  "homepage": "https://github.com/Jacarantech/jacaran.tech#readme"
+}

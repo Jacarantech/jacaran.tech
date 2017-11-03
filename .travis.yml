@@ -1,0 +1,38 @@
+language: node_js
+node_js:
+    - "8"
+
+cache:
+    directories:
+    - node_modules #NPM packages folder
+
+# Install encrypted deploy key
+before_install:
+    - >-
+        openssl aes-256-cbc 
+        -K $encrypted_8e8b998dccd4_key 
+        -iv $encrypted_8e8b998dccd4_iv 
+        -in travis-jacarantech.enc 
+        -out travis-jacarantech 
+        -d
+    - chmod 600 travis-jacarantech
+    - eval $(ssh-agent -s)
+    - ssh-add travis-jacarantech
+
+install:
+    - npm install gulp-cli -g
+    - npm install
+
+before_script:
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+    - chmod +x .travis/*.sh
+
+script:
+    - npm run build 
+
+deploy:
+    - provider: script
+    skip_cleanup: true
+    script: ./.travis/deploy.sh
+    on:
+        branch: master
